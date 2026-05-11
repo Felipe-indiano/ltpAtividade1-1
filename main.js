@@ -37,5 +37,36 @@ while(acao == 0){
             })
         }
     }
+    if(acao == 3){
+        const indiceLivroAlterar = parseInt(prompt(`Qual livro, gostaria de fazer alterações, passe o indice: `))
+
+        if(isNaN(indiceLivroAlterar) || indiceLivroAlterar < 0){
+            console.log(`Entrada invalida`)
+        }
+
+        else{
+            const NovoTitulo = prompt(`Qual o novo título: `).trim()
+            const NovoAutor = prompt(`Qual o novo autor: `).trim()
+            const NovoGenero = prompt(`Qual o novo gênero do livro: `).trim()
+            const NovoAnoPub = parseInt(prompt(`Qual o novo ano de laçamento: `))
+            const NovoNumPaginas = parseInt(prompt(`Qual o novo número de páginas: `))
+            
+            if(NovoTitulo != ""){
+                livros[indiceLivroAlterar].titulo = NovoTitulo
+            }
+            if(NovoAutor != ""){
+                livros[indiceLivroAlterar].autor = NovoAutor
+            }
+            if(NovoGenero != ""){
+                livros[indiceLivroAlterar].genero = NovoGenero
+            }
+            if(isNaN(NovoAnoPub) && NovoNumPaginas > 0){
+                livros[indiceLivroAlterar].anoPub = NovoAnoPub
+            }
+            if(isNaN(NovoNumPaginas) && NovoNumPaginas > 0){
+                livros[indiceLivroAlterar].numPaginas = NovoNumPaginas
+            }
+        }
+    }
     
 }
