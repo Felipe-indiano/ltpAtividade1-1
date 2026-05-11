@@ -68,5 +68,22 @@ while(acao == 0){
             }
         }
     }
-    
+
+    if(acao == 4){
+        if(livros.length === 0){
+            console.log(`Não a livros cadastrados`)
+        }
+        else{
+            const auxiliar = new Livro()
+
+            let media = auxiliar.mediaNumPaginas(livros)
+            console.log(`A média de páginas entre os livro é ${media}`)
+
+            let numGeneros = auxiliar.contarPorGenero(livros)
+
+            for(let genero in numGeneros){
+                console.log(`${genero}: ${numGeneros[genero]}`)
+            }
+        }
+    }
 }
