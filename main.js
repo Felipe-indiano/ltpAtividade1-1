@@ -26,4 +26,16 @@ while(acao == 0){
 
         livros.push(new Livro(titulo, autor, genero, anoPub, numPaginas));
     }
+
+    if(acao == 2){
+        if(livros.length === 0){
+            console.log(`Não nenhum livro cadastrado!`)
+        }
+        else {
+            livros.forEach((livro, indice) => {
+                console.log(indice + livro.getInfo())                    
+            })
+        }
+    }
+    
 }
