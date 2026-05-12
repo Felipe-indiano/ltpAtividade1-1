@@ -4,7 +4,7 @@ const prompt = require("prompt-sync")();
 const livros = [];
 
 
-while(acao == 0){
+while(acao != 0){
     let acao = parseInt(prompt(`
         --Biblioteca---
         1 - Cadastrar livro
